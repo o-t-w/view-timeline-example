@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url("Mona-Sans.woff2") format("woff2-variations");
+}
+
+.first-section {
+    height: 300dvh;
+    position: relative;
+}
+
+.first-section-inner {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    display: flex;
+}
+
+.first-section-content {
+    color: white;
+    height: fit-content;
+    margin: auto;
+}
+
+.second-section {
+    height: 200dvh;
+    position: relative;
+}
+
+body {
+    background-image: linear-gradient(black, oklch(0.38 0.15 254.07));
+    margin: 0;
+    background-size: 100vh 100vw;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Mona-Sans';
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 900;
+    text-wrap: balance;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    max-width: 1280px;
+    margin-inline: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+
+.menu-container {
+    height: 200vh
+}
+
+menu {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@600&display=swap');
+
+.menu-items button {
+  offset-path: circle(140px at center);
+  background-color: var(--bg);
+  /* animation-composition: accumulate; */
+  opacity: 0;
+  animation-name: rotateIcons, fadeIn;
+  /* animation-timeline: view(); */
+  view-timeline: --icons block;
+  animation-timeline: --icons;
+  animation-range: cover 50% cover 100%;
+  animation-fill-mode: both;
+  border-radius: 50%;
+  width: 80px;
+  aspect-ratio: 1;
+  offset-rotate: 0deg;
+}
+
+@keyframes rotateIcons {
+    to {
+      offset-distance: 100%;
+      opacity: 1;
+    }
+}
+
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+       }
+       100% {
+         opacity: 1;
+       }
+} */
+
+.menu-items button:nth-child(1) {
+  offset-distance: 100%;
+  view-timeline-inset: 0;
+}
+
+.menu-items button:nth-child(2) {
+   offset-distance: 80%;
+   view-timeline-inset: 100px;
+}
+
+.menu-items button:nth-child(3) {
+   offset-distance: 60%;
+   view-timeline-inset: 200px;
+}
+
+.menu-items button:nth-child(4) {
+   offset-distance: 40%;
+ view-timeline-inset: 300px;
+}
+
+.menu-items button:nth-child(5) {
+   offset-distance: 20%;
+   view-timeline-inset: 400px;
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 78px;;
+}
